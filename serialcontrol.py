@@ -1,12 +1,12 @@
 import serial
 
 # This is custom controller library designed to control a custom Mates Studio - Genius Project
-# Normally, using Architect or Commander is recommended, however at the time of writing RockPi
+# Normally, using Architect or Commander is recommended, however at the time of writing Rock SBC
 # can't be configured to disable Serial console during boot and hence projects made using
-# Architect and Commander environments, replies with errors preventing the RockPi to boot
+# Architect and Commander environments, replies with errors preventing the Rock SBC to boot
 # completely.
 
-class RockPiBBMController:
+class RockSBCBBMController:
 
     def __init__(self):
         self.serial_port = serial.Serial()
@@ -35,7 +35,7 @@ class RockPiBBMController:
         self.__write_int8(0)
         
     def sendCommandReset(self):
-        text_string = "BBMRockPiSTART"
+        text_string = "BBMRockSBCSTART"
         self.__write_string(text_string)
         self.__write_int8(0)
         self.__write_int8(0)
