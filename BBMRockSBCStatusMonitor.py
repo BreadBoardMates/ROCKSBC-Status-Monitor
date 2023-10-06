@@ -28,7 +28,7 @@ import os
 # Normally, using Architect or Commander is recommended, however at the time of writing RockPi can't be
 # configured to disable Serial console during boot and hence projects made using Architect and Commander
 # environments, replies with errors preventing the RockPi to boot completely.
-from serialcontrol import RockSBCBBMController
+from serialcontrol import ROCKSBCBBMController
 
 # Get the name of the current Wi-Fi connection.
 def getSSID():
@@ -118,7 +118,7 @@ def get_hdd():
 
 if __name__ == '__main__':
 
-    BBM = RockSBCBBMController()
+    BBM = ROCKSBCBBMController()
     BBM.begin(115200)
 
     gtime = up()
