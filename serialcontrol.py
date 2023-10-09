@@ -6,7 +6,7 @@ import serial
 # Architect and Commander environments, replies with errors preventing the Rock SBC to boot
 # completely.
 
-class RockSBCBBMController:
+class ROCKSBCBBMController:
 
     def __init__(self):
         self.serial_port = serial.Serial()
@@ -35,7 +35,7 @@ class RockSBCBBMController:
         self.__write_int8(0)
         
     def sendCommandReset(self):
-        text_string = "BBMRockSBCSTART"
+        text_string = "BBMROCKSBCSTART"
         self.__write_string(text_string)
         self.__write_int8(0)
         self.__write_int8(0)
